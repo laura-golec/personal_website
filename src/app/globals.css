@@ -2,28 +2,46 @@
 @tailwind components;
 @tailwind utilities;
 
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+  --foreground: #020802;
+  --background: #fbfefb;
+  --primary: #6db25c;
+  --secondary: #a2d8c8;
+  --accent: #5eb3de;
+  --font-body: "Lato", sans-serif;
+  --font-heading: "Fira Code", monospace;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+[data-theme='dark'] {
+  --foreground:  #f7fdf7;
+  --background: #010401;
+  --primary: #5ea34d;
+  --secondary: #275d4d;
+  --accent: #2176a1;
+  --font-body: "Lato", sans-serif;
+  --font-heading: "Fira Code", monospace;
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+.font-body {
+  font-family: var(--font-body);
+}
+
+.font-heading {
+  font-family: var(--font-heading);
+}
+
+.primary {
+  color: var(--primary)
+}
+
+.secondary {
+  color: var(--secondary)
+}
+
+.accent {
+  color: var(--accent)
 }
 
 @layer utilities {
