@@ -1,0 +1,80 @@
+.font-weight-100 {
+    font-weight: 100;
+}
+
+.font-weight-200 {
+    font-weight: 200;
+}
+
+.font-weight-300 {
+    font-weight: 300;
+}
+
+.font-weight-400 {
+    font-weight: 400;
+}
+
+.font-weight-500 {
+    font-weight: 500;
+}
+
+.font-weight-600 {
+    font-weight: 600;
+}
+
+.font-weight-700 {
+    font-weight: 700;
+}
+
+.font-weight-800 {
+    font-weight: 800;
+}
+
+.font-weight-900 {
+    font-weight: 900;
+}
+
+.font-body {
+    font-family: var(--font-body);
+}
+
+.font-heading {
+    font-family: var(--font-heading);
+}
+
+.primary {
+    color: var(--primary)
+}
+
+.secondary {
+    color: var(--secondary)
+}
+
+.accent {
+    color: var(--accent)
+}
+
+.font-size-xsmall {
+    font-size: var(--font-size-xs)
+}
+
+.font-size-small {
+    font-size: var(--font-size-sm)
+}
+
+.font-size-medium {
+    font-size: var(--font-size-md)
+}
+
+.font-size-large {
+    font-size: var(--font-size-lg)
+}
+
+.font-size-xlarge {
+    font-size: var(--font-size-xl)
+}
+
+.type-heading {
+    @extend .font-heading
+    
+}

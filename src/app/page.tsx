@@ -6,7 +6,7 @@ export default function Home() {
     <main className={styles.container}>
       <div className={styles.innerContainer}>
         <ThemeSwitch/>
-        <Text font="heading" color="primary">
+        <Text type="heading">
           Hello, World
         </Text>
         <Text color="primary">

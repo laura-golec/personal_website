@@ -18,53 +18,35 @@ const HeadingFontWeights = [
     "700",
 ] as const;
 
-type HeadingFontWeight = typeof BodyFontWeights[number];
+type HeadingFontWeight = typeof HeadingFontWeights[number];
 
 type Font = 'body' | 'heading';
 
-type FontWeightMap = {
-    body: BodyFontWeight;
-    heading: HeadingFontWeight;
-};
-
 type FontWeight<T extends Font> = T extends 'body' ? BodyFontWeight : HeadingFontWeight;
-
 
 interface TextProps<T extends Font> {
     color?: 'foreground' | 'primary' | 'secondary' | 'accent';
     font?: T;
     weight?: FontWeight<T>;
-    type?: 'default' | 'primary' | 'secondary';
-    size?: 'x-small' | 'small' | 'medium' | 'large' | 'x-large';
+    type?: 'heading' | 'subheading' | 'h3' | 'h4' | 'body' | 'caption';
+    size?: 'xsmall' | 'small' | 'medium' | 'large' | 'xlarge';
     children: React.ReactNode;
 }
-
-const typeStyles: Record<string, string> = {
-    default: 'text-default',
-    primary: 'text-primary',
-    secondary: 'text-secondary',
-};
-
-const sizeStyles: Record<string, string> = {
-    small: 'text-sm',
-    medium: 'text-md',
-    large: 'text-lg',
-};
 
 export const Text = <T extends Font>({
     color = 'foreground',
     font,
-    weight = '700',
-    type = 'default',
-    size = 'medium',
+    weight = '400',
+    type = 'body',
+    size = 'small',
     children
 }: TextProps<T>) => {
     const classNames = [
-        typeStyles[type],
-        sizeStyles[size],
+        type? `type-${type}` : '',
+        size? `font-size-${size}` : '',
         color ? `${color}` : '',
         font ? `font-${font}` : '',
-        weight ? `${weight}` : ''
+        weight ? `font-weight-${weight}` : ''
     ].join(' ');
 
     return (

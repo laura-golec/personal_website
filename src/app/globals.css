@@ -1,8 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+@import './components/Text/Text.module.css';
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
 
 :root {
   --foreground: #020802;
@@ -12,6 +13,57 @@
   --accent: #5eb3de;
   --font-body: "Lato", sans-serif;
   --font-heading: "Fira Code", monospace;
+
+  /* Base font size */
+  --font-size-base: 1em; /* 1em = 16px if the base size is not altered elsewhere */
+
+  /* Scale factor */
+  --scale-factor: 1.333; /* Perfect fourth ratio */
+
+  /* Type scale variables */
+  --font-size-xs: calc(var(--font-size-base) / var(--scale-factor));
+  --font-size-sm: var(--font-size-base);
+  --font-size-md: calc(var(--font-size-base) * var(--scale-factor));
+  --font-size-lg: calc(var(--font-size-md) * var(--scale-factor));
+  --font-size-xl: calc(var(--font-size-lg) * var(--scale-factor));
+
+  /* Media query breakpoints */
+  --breakpoint-xs: 320px;
+  --breakpoint-sm: 480px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 1024px;
+  --breakpoint-xl: 1200px;
+}
+
+/* Responsive adjustments */
+@media (min-width: 320px) {
+  :root {
+      --font-size-base: 0.875em;
+  }
+}
+
+@media (min-width: 480px) {
+  :root {
+      --font-size-base: 1em;
+  }
+}
+
+@media (min-width: 768px) {
+  :root {
+      --font-size-base: 1.125em;
+  }
+}
+
+@media (min-width: 1024px) {
+  :root {
+      --font-size-base: 1.25em;
+  }
+}
+
+@media (min-width: 1200px) {
+  :root {
+      --font-size-base: 1.375em;
+  }
 }
 
 [data-theme='dark'] {
@@ -20,28 +72,6 @@
   --primary: #5ea34d;
   --secondary: #275d4d;
   --accent: #2176a1;
-  --font-body: "Lato", sans-serif;
-  --font-heading: "Fira Code", monospace;
-}
-
-.font-body {
-  font-family: var(--font-body);
-}
-
-.font-heading {
-  font-family: var(--font-heading);
-}
-
-.primary {
-  color: var(--primary)
-}
-
-.secondary {
-  color: var(--secondary)
-}
-
-.accent {
-  color: var(--accent)
 }
 
 @layer utilities {
