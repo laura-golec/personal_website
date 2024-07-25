@@ -24,6 +24,7 @@
       "@components": ["src/app/components"],
       "@types": ["src/app/types"],
       "@constants": ["src/app/constants"],
+      "@hooks": ["src/app/hooks"],
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
