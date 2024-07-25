@@ -4,6 +4,7 @@
 
 .toggle:hover {
     color: var(--accent);
+    cursor: pointer; 
 }
 
 .toggle:active {

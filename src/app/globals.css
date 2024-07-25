@@ -7,6 +7,8 @@
 @tailwind utilities;
 
 :root {
+  --base-unit: 1em;
+
   --foreground: #020802;
   --background: #fbfefb;
   --primary: #6db25c;
@@ -18,7 +20,7 @@
   --font-heading: "Fira Code", monospace;
 
   /* Base font size */
-  --font-size-base: 1em; /* 1em = 16px if the base size is not altered elsewhere */
+  --font-size-base: var(--base-unit); /* 1em = 16px if the base size is not altered elsewhere */
 
   /* Scale factor */
   --scale-factor: 1.444; /* Augmented fourth ratio */
@@ -41,31 +43,31 @@
 /* Responsive adjustments */
 @media (min-width: 0) {
   :root {
-      --font-size-base: 0.875em;
+      --base-unit: 0.875em;
   }
 }
 
 @media (min-width: 480px) {
   :root {
-      --font-size-base: 1em;
+      --base-unit: 1em;
   }
 }
 
 @media (min-width: 768px) {
   :root {
-      --font-size-base: 1.125em;
+      --base-unit: 1.125em;
   }
 }
 
 @media (min-width: 1024px) {
   :root {
-      --font-size-base: 1.25em;
+      --base-unit: 1.25em;
   }
 }
 
 @media (min-width: 1200px) {
   :root {
-      --font-size-base: 1.375em;
+      --base-unit: 1.375em;
   }
 }
 

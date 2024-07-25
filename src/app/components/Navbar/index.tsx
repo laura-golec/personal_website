@@ -13,8 +13,8 @@ export const Navbar: React.FC<NavbarProps> = ({ links }) => {
     <nav className="navbar">
       <ul className="navbar-menu">
         {links.map((link, index) => (
-          <li key={index} className='navbar-item'>
-            <a href={link.href} className="navbar-link" style={{ '--hover-color': `var(--${link.hoverColor})` } as React.CSSProperties}>
+          <li key={index} className='navbar-item' style={{ '--hover-color': `var(--${link.hoverColor})` } as React.CSSProperties}>
+            <a href={link.href} className="navbar-link">
               <Text preset="caption">
                 {link.name}
               </Text>

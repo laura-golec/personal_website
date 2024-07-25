@@ -8,29 +8,21 @@ interface TextProps<T extends Font> {
     weight?: FontWeight<T>;
     preset?: FontPresets;
     size?: FontSizes;
-    hover?: Colors;
     children: React.ReactNode;
 }
 
-export const Text = <T extends Font>({
-    color,
-    font,
-    weight,
-    preset = 'body',
-    size,
-    children
-}: TextProps<T>) => {
+export const Text = <T extends Font>(props: TextProps<T>) => {
     const classNames = [
-        preset? TextPresets[preset]: '',
-        size? `font-size-${size}` : '',
-        color ? `${color}` : '',
-        font ? `font-${font}` : '',
-        weight ? `font-weight-${weight}` : ''
+        props.preset? TextPresets[props.preset] : TextPresets['body'],
+        props.size? `text-size-${props.size}` : '',
+        props.color ? `text-${props.color}` : '',
+        props.font ? `font-${props.font}` : '',
+        props.weight ? `font-weight-${props.weight}` : '',
     ].join(' ');
 
     return (
         <span className={classNames}>
-            {children}
+            {props.children}
         </span>
     );
 };
