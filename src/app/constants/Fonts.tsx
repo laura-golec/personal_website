@@ -23,5 +23,5 @@ export const TextPresets: Record<FontPresets, string> = {
     'h3': 'font-heading font-size-medium text-accent font-weight-600',
     'h4': 'font-body font-size-medium text-foreground font-weight-400',
     'body': 'font-body font-size-small text-foreground font-weight-400',
-    'caption': 'font-body font-size-xsmall text-foreground-muted font-weight-400',
+    'caption': 'font-body font-size-xsmall text-foreground_muted font-weight-400',
 }

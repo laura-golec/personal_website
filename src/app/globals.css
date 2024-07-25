@@ -84,3 +84,23 @@
     text-wrap: balance;
   }
 }
+
+.container {
+  background: var(--background);
+  color: var(--foreground);
+  min-height: 100vh;
+  min-width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: start;
+  padding: 2em;
+  gap: 1em;
+}
+
+.innerContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1em;
+}

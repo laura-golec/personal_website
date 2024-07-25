@@ -1,3 +1,5 @@
+'use client'
+
 import React from 'react';
 import { Colors, Font, FontWeight, FontPresets, FontSizes } from '@types'
 import { TextPresets } from '@constants'
@@ -8,6 +10,7 @@ interface TextProps<T extends Font> {
     weight?: FontWeight<T>;
     preset?: FontPresets;
     size?: FontSizes;
+    hover?: Colors;
     children: React.ReactNode;
 }
 
@@ -18,10 +21,13 @@ export const Text = <T extends Font>(props: TextProps<T>) => {
         props.color ? `text-${props.color}` : '',
         props.font ? `font-${props.font}` : '',
         props.weight ? `font-weight-${props.weight}` : '',
-    ].join(' ');
+        props.hover ? `hover:text-[var(--hover)]` : '',
+    ].filter(Boolean).join(' ');
+
+    const style = props.hover ? { '--hover': `var(--${props.hover})` } : {};
 
     return (
-        <span className={classNames}>
+        <span className={classNames} style={style as React.CSSProperties}>
             {props.children}
         </span>
     );

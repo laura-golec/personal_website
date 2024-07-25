@@ -36,10 +36,6 @@
   text-decoration: none;
 }
 
-.navbar-item:hover {
-  color: var(--hover-color);
-}
-
 @keyframes spinGradient {
   0% {
     background:

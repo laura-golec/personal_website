@@ -7,7 +7,7 @@ This website is written using TypeScript. It uses the React and NextJS framework
 ## How is it hosted?
 Thanks for asking! It's hosted on my homelab linux server that I maintain myself. It uses a custom dynamicDNS script to update the records on my NameCheap domain. 
 
-The server is fully self-hosted off of an old laptop I was gifted. It also runs all of my media backups and multiple other secret projects!
+The server is fully self-hosted off of an old laptop I was gifted. It also runs all of my media backups and multiple other ~secret~ projects!
 
 The reverse proxy hosting is handled by Caddy! 
 
