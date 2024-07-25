@@ -42,6 +42,14 @@
     font-family: var(--font-heading);
 }
 
+.foreground {
+    color: var(--foreground)
+}
+
+.foreground-muted {
+    color: var(--foreground-muted)
+}
+
 .primary {
     color: var(--primary)
 }
@@ -72,9 +80,4 @@
 
 .font-size-xlarge {
     font-size: var(--font-size-xl)
-}
-
-.type-heading {
-    @extend .font-heading
-    
 }

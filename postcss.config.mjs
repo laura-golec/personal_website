@@ -3,7 +3,7 @@ const config = {
   plugins: {
     'postcss-import': {},
     tailwindcss: {},
-    'postcss-extend': {}
+    'postcss-reuse': {}
   },
 };
 

@@ -1,25 +1,35 @@
-import { Text, ThemeSwitch } from "@components";
+import { Text, ThemeSwitch, Navbar, NavbarProps } from "@components";
 import styles from './styles.module.css'
 
 export default function Home() {
+  const links: NavbarProps['links'] = [
+    { name: 'Home', href: '/', hoverColor: 'primary' },
+    { name: 'About', href: '/about', hoverColor: 'secondary' },
+    { name: 'Projects', href: '/projects', hoverColor: 'accent' },
+    { name: 'Contact', href: '/contact', hoverColor: 'primary' },
+  ];
+
   return (
     <main className={styles.container}>
+      <Navbar links={links} />
       <div className={styles.innerContainer}>
-        <ThemeSwitch/>
-        <Text type="heading">
-          Hello, World
+        <Text preset="heading">
+          Heading
         </Text>
-        <Text color="primary">
-          Hi, I am primary
+        <Text preset="subheading">
+          Subheading
         </Text>
-        <Text color="secondary">
-          Hi, I am secondary
+        <Text preset="h3">
+          Third heading
         </Text>
-        <Text color="accent">
-          Hi, I am accent
+        <Text preset="h4">
+          Fourth heading
         </Text>
-        <Text>
-          This is an experimental text component
+        <Text preset="body">
+          Body text
+        </Text>
+        <Text preset="caption">
+          Caption text
         </Text>
       </div>
     </main>

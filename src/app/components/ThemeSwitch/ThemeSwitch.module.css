@@ -1,0 +1,11 @@
+.toggle {
+    color: var(--foreground-muted);
+}
+
+.toggle:hover {
+    color: var(--accent);
+}
+
+.toggle:active {
+    fill: var(--accent)
+}

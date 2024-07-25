@@ -5,11 +5,14 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: start;
+    padding: 2em;
+    gap: 1em;
   }
 
 .innerContainer {
     display: flex;
     flex-direction: column;
     align-items: center;
+    gap: 1em;
   }

@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
 @import './components/Text/Text.module.css';
+@import './components/Navbar/Navbar.module.css';
 
 @tailwind base;
 @tailwind components;
@@ -11,6 +12,8 @@
   --primary: #6db25c;
   --secondary: #a2d8c8;
   --accent: #5eb3de;
+  --foreground-muted: color-mix(in srgb, var(--foreground) 70%, var(--background));
+  --dropshadow: color-mix(in srgb, var(--foreground) 10%, transparent);
   --font-body: "Lato", sans-serif;
   --font-heading: "Fira Code", monospace;
 
@@ -18,7 +21,7 @@
   --font-size-base: 1em; /* 1em = 16px if the base size is not altered elsewhere */
 
   /* Scale factor */
-  --scale-factor: 1.333; /* Perfect fourth ratio */
+  --scale-factor: 1.444; /* Augmented fourth ratio */
 
   /* Type scale variables */
   --font-size-xs: calc(var(--font-size-base) / var(--scale-factor));
@@ -36,7 +39,7 @@
 }
 
 /* Responsive adjustments */
-@media (min-width: 320px) {
+@media (min-width: 0) {
   :root {
       --font-size-base: 0.875em;
   }
