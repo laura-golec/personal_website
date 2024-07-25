@@ -1,12 +1,11 @@
 import React from 'react';
 import './Navbar.module.css';
-import { Text, ThemeSwitch } from '@components'
-import { BiLogoLinkedin } from 'react-icons/bi';
-
-type NavbarHoverColors = 'primary' | 'secondary' | 'accent' | 'foreground';
+import { Text, ThemeSwitch } from '@components';
+import { Colors } from '@types';
+import { NavLink } from './NavLink';
 
 export interface NavbarProps {
-  links: { name: string, href: string, hoverColor?: NavbarHoverColors }[];
+  links: { name: string, href: string, hoverColor?: Colors }[];
 }
 
 export const Navbar: React.FC<NavbarProps> = ({ links }) => {
@@ -15,16 +14,16 @@ export const Navbar: React.FC<NavbarProps> = ({ links }) => {
       <ul className="navbar-menu">
         {links.map((link, index) => (
           <li key={index} className='navbar-item'>
-            <a href={link.href} className="navbar-link">
+            <NavLink href={link.href} className="navbar-link">
               <Text preset="caption" hover={link.hoverColor}>
-                {link.name}
+                {link.name.toLowerCase()}
               </Text>
-            </a>
+            </NavLink>
           </li>
         ))}
       </ul>
       <div className="navbar-item">
-        <ThemeSwitch/>
+        <ThemeSwitch />
       </div>
     </nav>
   );

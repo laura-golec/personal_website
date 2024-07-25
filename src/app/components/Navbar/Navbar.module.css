@@ -18,6 +18,13 @@
         linear-gradient(var(--background), var(--background)) padding-box,
         radial-gradient(circle, var(--primary), var(--secondary), var(--accent)) border-box;
   animation: spinGradient 4s linear infinite;
+
+  .navbar-link.active {
+    background:
+        linear-gradient(var(--background), var(--background)) padding-box,
+        radial-gradient(circle, var(--primary), var(--secondary), var(--accent)) border-box;
+  animation: spinGradient 4s linear infinite;
+  }
 }
 
 /* Inner content */
@@ -33,7 +40,22 @@
 }
 
 .navbar-link {
+  border-bottom: 0.1em solid transparent;
+  position: relative;
   text-decoration: none;
+}
+
+.navbar-link.active {
+  background:
+        linear-gradient(var(--background), var(--background)) content-box,
+        radial-gradient(circle, var(--foreground-muted), var(--foreground-muted)) border-box;
+}
+
+.navbar:hover.navbar-link.active {
+  background:
+        linear-gradient(var(--background), var(--background)) padding-box,
+        radial-gradient(circle, var(--primary), var(--secondary), var(--accent)) border-box;
+  animation: spinGradient 4s linear infinite;
 }
 
 @keyframes spinGradient {
